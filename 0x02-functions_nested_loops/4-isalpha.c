@@ -4,6 +4,7 @@
  * _isalpha - Entry point
  *
  * Description: _isalpha for checking 'A' to 'z' and printing is c is lowercase
+ * @c: Prototype given
  * Return: 1 for c lowercase. 0 for others
  */
 

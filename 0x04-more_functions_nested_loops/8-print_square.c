@@ -3,7 +3,7 @@
 /**
 * print_square - prints hashes squares.
 * @size: size of the square.
-* Return: not included 
+* Return: not included
 */
 
 void print_square(int size)

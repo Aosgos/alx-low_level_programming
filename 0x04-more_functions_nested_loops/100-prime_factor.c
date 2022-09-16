@@ -1,30 +1,22 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
-* print_triangle - prints a triangle.
-* @size: prototype given
-* Return: no return
+* main - prints largest prime factor.
+* Return: Always 0.
 */
-
-void print_triangle(int size)
+int main(void)
 {
-	int i, j, k;
+	long int n, pf;
 
-	if (size > 0)
+	n = 612852475143;
+	for (pf = 2; pf <= n; pf++)
 	{
-		for (i = 0; i < size; i++)
+		if (n % pf == 0)
 		{
-			for (k = 1; k < (size - i); k++)
-				_putchar(' ');
-			for (j = 0; j <= i; j++)
-			{
-				_putchar('#');
-			}
-			_putchar('\n');
+			n /= pf;
+			pf--;
 		}
 	}
-	else
-	{
-		_putchar('\n');
-	}
+	printf("%ld\n", pf);
+	return (0);
 }

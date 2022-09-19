@@ -1,4 +1,5 @@
 #include "main.h"
+#include <string.h>
 
 /**
  * swap_int - Entry point
@@ -8,5 +9,7 @@
 
 void swap_int(int *a, int *b)
 {
-	stcat(*a, *b);
+	strcat(int *a, int *b);
+
+	_putchar("\n");
 }

@@ -1,18 +1,19 @@
 #include "main.h"
-#include <string.h>
+
 /**
  * _strlen - function entry point
- * -strlen: main point
+ * _strlen: main point
  * @s: given prototype
- * Return: Always 0 (Success)
+ * Return: 0
  */
 
 int _strlen(char *s)
 {
+	int str;
 	str = 0;
 
 	while (*(s + str) != '\0')
 		str++;
 
-	return (str);
+	return (0);
 }

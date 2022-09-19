@@ -9,7 +9,8 @@
 
 void swap_int(int *a, int *b)
 {
-	strcat(int *a, int *b);
+	int n;
 
-	_putchar("\n");
+	n = *a;
+	*b = n;
 }

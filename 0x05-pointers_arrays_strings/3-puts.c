@@ -17,10 +17,7 @@ void _puts(char *str)
 			_putchar('\n');
 			break;
 		}
-		else
-		{
 		_putchar(*(str + i));
 		i++;
-		}
-	}
+	}	
 }

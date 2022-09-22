@@ -2,7 +2,7 @@
 #include <string.h>
 
 /**
- * _strncat - a function that concatinates two strings
+ * _strncpy - a function that concatinates two strings
  * including the terminaing null byte, to the
  * buffer pointed to by the destination
  * @dest: protoype given for destinaition
@@ -11,8 +11,8 @@
  * Return: dest
  */
 
-char *_strncat(char *dest, char *src, int n)
+char *_strncpy(char *dest, char *src, int n)
 {
-	strncat(dest, src, n);
-	return (dest);
+	strncpy(*dest, *src, n);
+	return (0);
 }

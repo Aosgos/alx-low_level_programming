@@ -7,11 +7,12 @@
  * buffer pointed to by the destination
  * @dest: protoype given for destinaition
  * @src: prototype given for source file
- * n: integer function figure
+ * @n: integer function figure
+ * Return: dest
  */
 
 char char *_strncat(char *dest, char *src, int n);
 {
-	strcat(dest, src);
+	strncat(dest, src, n);
 	return (dest);
 }

@@ -12,6 +12,9 @@
 
 char *_strcat(char *dest, char *src)
 {
-	strcat(dest, src);
+	if (*dest != *src)
+	{
+		*dest = *src;
+	}
 	return (dest);
 }

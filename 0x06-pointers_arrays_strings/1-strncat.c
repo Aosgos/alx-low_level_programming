@@ -13,10 +13,10 @@
 
 char *_strncat(char *dest, char *src, int n)
 {
-	if (*dest != *src)
+	if (*dest != *src && n != '\0')
 	{
 		*dest = *src;
-		n++;
+		n = '\0';
 	}
 	return (dest);
 }

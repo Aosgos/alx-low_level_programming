@@ -1,5 +1,11 @@
 #include "main.h"
 
+/**
+ * print_number - main entry point to int
+ * @n: integer
+ * Return: Nayyy, ./rest
+ */
+
 void print_number(int n)
 {
 	unsigned int m;

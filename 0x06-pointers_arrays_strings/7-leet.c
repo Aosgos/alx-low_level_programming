@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * *cap_string - main entry point to cap letters
+ * *leet - main entry point to cap letters
  * @s: pointers pointing address to caps some ass
  * Return: 0, ./rest
  */
 
-char *leet(char *)
+char *leet(char *s)
 {
 	int i, j;
 

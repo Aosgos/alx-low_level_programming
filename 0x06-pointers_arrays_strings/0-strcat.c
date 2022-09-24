@@ -12,9 +12,19 @@
 
 char *_strcat(char *dest, char *src)
 {
-	if (*dest != *src)
+	int i = 0, len = 0;
+
+	if (*(dest + i) == '\0')
 	{
-		*dest = *src;
+		i++;
 	}
+
+	if (*(src + len) != '\0')
+	{
+		*(dest + i) = *(src + len);
+		i++;
+		len++;
+	}
+
 	return (dest);
 }

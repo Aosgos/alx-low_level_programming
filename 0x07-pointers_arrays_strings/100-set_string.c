@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * set_string - function that sets tje valie of a pointer to a char
+ * set_string - function that sets
  * @s: pointer that points
- * @c: char given
+ * @to: char given
  * Return: nothing to return given
  */
 

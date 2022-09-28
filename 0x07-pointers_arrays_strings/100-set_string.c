@@ -1,22 +1,13 @@
 #include "main.h"
 
 /**
- * print_chessboard - function to set the value of a pointer to a char
- * @a: manipulated pointer
- * Return: nothing
+ * set_string - function that sets tje valie of a pointer to a char
+ * @s: pointer that points
+ * @c: char given
+ * Return: nothing to return given
  */
 
-void print_chessboard(char (*a)[8])
+void set_string(char **s, char *to)
 {
-	int i = 0, j;
-
-	while (a[i][7])
-	{
-		for (j = 0; j < 8; j++)
-		{
-			_putchar(a[i][j]);
-		}
-		_putchar('\n');
-		i++;
-	}
+	*s = to;
 }

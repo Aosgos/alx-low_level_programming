@@ -1,21 +1,22 @@
 #include "main.h"
 
 /**
- * print_chessboard - to print the two diagonals of square matrix of inegers
- * @a: first int in the protoype
+ * print_diagsums - prints the sum of two diagonal s of a square matric int
+ * @a:input pointer.
+ * @size: size of the matrix
  * Return: nothing
  */
-void print_chessboard(char (*a)[8])
-{
-	int i = 0, j;
 
-	while (a[i][7])
+void print_diagsums(int *a, int size)
+{
+	int i;
+	unsigned int sum = 0, sum2 = 0;
+
+	for (i = 0; i < size; i++)
 	{
-		for (j = 0; j < 8; j++)
-		{
-			_putchar(a[i][j]);
-		}
-		_putchar('\n');
-		i++;
+		sum += a[(size * i) + i];
+		sum2 += a[(size * (i + 1)) - (i + 1)];
 	}
+	printf("%d, ", sum);
+	printf("%d\n", sum2);
 }

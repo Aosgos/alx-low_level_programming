@@ -5,7 +5,7 @@
  * dog_t - Typedef for dog struct
  */
 
-typedf struct dog dog_t;
+typedef struct dog dog_t;
 
 /**
  * struct dog - Struct to store dog infor
@@ -17,7 +17,7 @@ typedf struct dog dog_t;
  * Discreption: a new type of 'struct dog'
  */
 
-struct diog
+struct dog
 {
 	char *name;
 	float age;

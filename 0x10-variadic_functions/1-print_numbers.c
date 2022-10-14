@@ -2,6 +2,13 @@
 #include <stdarg.h>
 #include <stdlib.h>
 
+/**
+ * print_numbers - print function
+ * @separator: strings between numbers to print
+ * @n: arguments
+ * Return: nill
+ */
+
 void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;

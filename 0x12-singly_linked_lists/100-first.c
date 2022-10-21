@@ -11,7 +11,3 @@ void print_first(void)
 	printf("I bore my house upon my back!\n");
 }
 
-void main(void)
-{
-	main();
-}

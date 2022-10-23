@@ -1,24 +1,22 @@
 #include "main.h"
 
 /**
-* main - Prints _putchar
-* @c: The character to print
-*
-* Return: Always 0 (Success)
-*/
-int _putchar(char c);
+ * main - main function entry
+ * Return: not specified
+ * Discription: to print '_putchar'
+ */
 
 int main(void)
 {
-	int str[] = {95, 112, 117, 116, 99, 104, 97, 114};
-
-	int i, Size;
-
-	Size = sizeof(str) / sizeof(int);
-	for (i = 0; i < Size; i++)
-	{
-		_putchar(str[i]);
-	}
+	_putchar(95);
+	_putchar(112);
+	_putchar(117);
+	_putchar(116);
+	_putchar(99);
+	_putchar(104);
+	_putchar(97);
+	_putchar(114);
 	_putchar('\n');
+
 	return (0);
 }

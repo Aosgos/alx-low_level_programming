@@ -1,20 +1,26 @@
-#include "main.h"
+#include "lists.h"
 
 /**
  * print_listint - print elements of listint_t
- *
  * @h: number of nodes
  * Return: number of nodes
  */
 
 size_t print_listint(const listint_t *h)
 {
-	int i = 0;
+	size_t elements = 0;
 
-	while (h[i] != '\0')
+	while (h)
 	{
-		printf("%d /n", h[i++]);
+		printf("%d/n", h->n);
+		h = h->next;
+		elements++;
+	}
+	if (!h)
+	{
+		return (elements);
 	}
 
-	return (*h);
+
+	return (elements);
 }

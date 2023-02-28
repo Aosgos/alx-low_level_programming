@@ -1,2 +1,8 @@
-all:
-	gcc main.c school.c -o school
+CC = gcc
+SRC = main.c util.c
+
+all: myprogram
+
+myprogram: $(SRC)
+	$(CC) -o $@ $(SRC)
+

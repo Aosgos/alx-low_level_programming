@@ -1,8 +1,14 @@
 #include <stdio.h>
 
-int main()
+/**
+ * main - main function
+ *
+ * Return: 0
+ */
+
+int main(void)
 {
-    int i, j;
+	int i, j;
 
 	for (i = 0; i <= 8; i++)
 	{
@@ -16,6 +22,5 @@ int main()
 		}
 	}
 
-    return 0;
+	return (0);
 }
-

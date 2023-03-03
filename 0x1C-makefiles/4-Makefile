@@ -1,0 +1,42 @@
+# Compiler
+CC = gcc
+
+# Compiler flags
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+# Source files
+SRC = main.c file1.c file2.c
+
+# Object files
+OBJ = $(SRC:.c=.o)
+
+# Executable name
+NAME = school
+
+# Program to delete files
+RM = rm -f
+
+# Rules
+all: $(NAME)
+
+clean:
+	$(RM) $(OBJ) $(NAME) *~ \#*\# *.swp
+
+oclean:
+	$(RM) $(OBJ)
+
+fclean: clean oclean
+
+re: fclean all
+
+# Dependencies
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) -o $@ $^
+
+# Implicit rule to compile .c files into .o files
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Phony targets
+.PHONY: all clean oclean fclean re
+

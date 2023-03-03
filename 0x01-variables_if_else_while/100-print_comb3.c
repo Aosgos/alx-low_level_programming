@@ -14,10 +14,9 @@ int main(void)
 	{
 		for (j = i + 1; j <= 9; j++)
 		{
+			putchar(j + '0');
 			putchar(i + '0');
 			putchar(',');
-			putchar(' ');
-			putchar(j + '0');
 			putchar(' ');
 		}
 	}

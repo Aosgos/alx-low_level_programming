@@ -1,23 +1,14 @@
 #include <stdio.h>
 
-int main() {
-    int i, j, k;
+/**
+ * main - function
+ * Return: 0
+ */
 
-    for (i = 0; i <= 7; i++) {
-        for (j = i + 1; j <= 8; j++) {
-            for (k = j + 1; k <= 9; k++) {
-                putchar(i + '0');
-                putchar(j + '0');
-                putchar(k + '0');
-                if (i < 7 || j < 8 || k < 9) {
-                    putchar(',');
-                    putchar(' ');
-                }
-            }
-        }
-    }
+int main()
+{
+    int i, j;
 
-<<<<<<< HEAD
 	for (i = 0; i <= 8; i++)
 	{
 		while (
@@ -33,7 +24,4 @@ int main() {
 	}
 
 	return (0);
-=======
-    return 0;
->>>>>>> 60f4b794add92a23d7a42bb0ce935da47942ef07
 }

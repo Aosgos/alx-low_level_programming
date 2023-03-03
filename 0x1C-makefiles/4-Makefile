@@ -17,7 +17,7 @@ NAME = school
 RM = rm -f
 
 # Rules
-all: $(NAME)
+all: $(OBJ)
 
 clean:
 	$(RM) $(OBJ) $(NAME) *~ \#*\# *.swp
@@ -28,15 +28,3 @@ oclean:
 fclean: clean oclean
 
 re: fclean all
-
-# Dependencies
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^
-
-# Implicit rule to compile .c files into .o files
-%.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
-
-# Phony targets
-.PHONY: all clean oclean fclean re
-

@@ -19,8 +19,6 @@ int main(void)
 			putchar(',');
 			putchar(' ');
 		}
-		while (<=59)
-			',';
 	}
 
 	return (0);

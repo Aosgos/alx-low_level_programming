@@ -5,7 +5,7 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 # Source files
-SRC = main.c file1.c file2.c
+SRC = main.c school1.c school2.c
 
 # Object files
 OBJ = $(SRC:.c=.o)

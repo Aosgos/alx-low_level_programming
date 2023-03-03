@@ -1,0 +1,57 @@
+#!/usr/bin/make
+
+# Compiler
+CC = gcc
+
+# Flags
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
+# Executable name
+NAME = school
+
+# Directories
+SRC_DIR = src
+OBJ_DIR = obj
+
+# Sources and objects
+SRC = $(wildcard $(SRC_DIR)/*.c)
+OBJ = $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRC))
+
+# Commands
+MKDIR_P = mkdir -p
+RM = rm -f
+
+# Phony targets
+.PHONY: all clean oclean fclean re
+
+# Default target
+all: $(NAME)
+
+# Executable target
+$(NAME): $(OBJ)
+    $(CC) $(CFLAGS) $^ -o $@
+
+# Object files target
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c m.h | $(OBJ_DIR)
+    $(CC) $(CFLAGS) -c $< -o $@
+
+# Object files directory target
+$(OBJ_DIR):
+    $(MKDIR_P) $(OBJ_DIR)
+
+# Clean targets
+clean:
+    $(RM) $(NAME)
+
+oclean:
+    $(RM) $(OBJ)
+
+fclean: clean oclean
+
+# Recursive clean target
+recursive-clean:
+    $(RM) $(NAME) $(OBJ_DIR)
+
+# Recompilation target
+re: fclean all
+

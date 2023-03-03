@@ -5,7 +5,7 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 # Source files
-SRC = main.c school1.c school2.c
+SRC = main.c file1.c file2.c
 
 # Object files
 OBJ = $(SRC:.c=.o)
@@ -17,7 +17,7 @@ NAME = school
 RM = rm -f
 
 # Rules
-all: $(OBJ)
+all: $(NAME)
 
 clean:
 	$(RM) $(OBJ) $(NAME) *~ \#*\# *.swp
@@ -28,3 +28,14 @@ oclean:
 fclean: clean oclean
 
 re: fclean all
+
+# Dependencies
+$(NAME): $(OBJ)
+	$(CC) $(CFLAGS) -o $@ $^
+
+# Implicit rule to compile .c files into .o files
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Phony targets
+.PHONY: all clean oclean fclean re

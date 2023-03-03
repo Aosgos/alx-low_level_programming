@@ -20,7 +20,7 @@ int main()
 			 * putchar(' ');*/
 			}
 		      )
-			putchar(' '),putchar(',');
+			putchar(' ') || putchar(',');
 	}
 
 	return (0);
